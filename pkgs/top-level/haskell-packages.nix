@@ -11,6 +11,7 @@ let
     "ghcjs"
     "ghcjs82"
     "ghcjs84"
+    "ghcjsLayer3"
     "integer-simple"
   ];
 
@@ -79,7 +80,12 @@ in {
       stage0 = ../development/compilers/ghcjs-ng/8.4/stage0.nix;
       ghcjsDepOverrides = callPackage ../development/compilers/ghcjs-ng/8.4/dep-overrides.nix {};
     };
-
+    ghcjsLayer3 = callPackage ../development/compilers/ghcjs-ng {
+      bootPkgs = packages.ghc844;
+      ghcjsSrcJson = ../development/compilers/ghcjs-ng/Layer3/git.json;
+      stage0 = ../development/compilers/ghcjs-ng/Layer3/stage0.nix;
+      ghcjsDepOverrides = callPackage ../development/compilers/ghcjs-ng/Layer3/dep-overrides.nix {};
+    };
     # The integer-simple attribute set contains all the GHC compilers
     # build with integer-simple instead of integer-gmp.
     integer-simple = let
@@ -156,6 +162,12 @@ in {
     ghcjs84 = callPackage ../development/haskell-modules rec {
       buildHaskellPackages = ghc.bootPkgs;
       ghc = bh.compiler.ghcjs84;
+      compilerConfig = callPackage ../development/haskell-modules/configuration-ghc-8.4.x.nix { };
+      packageSetConfig = callPackage ../development/haskell-modules/configuration-ghcjs.nix { };
+    };
+    ghcjsLayer3 = callPackage ../development/haskell-modules rec {
+      buildHaskellPackages = ghc.bootPkgs;
+      ghc = bh.compiler.ghcjsLayer3;
       compilerConfig = callPackage ../development/haskell-modules/configuration-ghc-8.4.x.nix { };
       packageSetConfig = callPackage ../development/haskell-modules/configuration-ghcjs.nix { };
     };
