@@ -127,7 +127,7 @@ self: super: {
       rev = "ee119487711b5b0682ec37f6321020cca667ea37";
       sha256 = "1j1vajg00xlz3vgzmca252k21jyb0nb30qawsahqvw81zsjzchj8";
     };
-    version = "2.5.0";
+    version = "3.0.0";
   };
 
   # Depends on broken "lss" package.
