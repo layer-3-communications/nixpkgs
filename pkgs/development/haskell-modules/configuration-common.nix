@@ -119,6 +119,16 @@ self: super: {
 
   # Tests require a Kafka broker running locally
   haskakafka = dontCheck super.haskakafka;
+  
+  hw-kafka-client = overrideSrc (dontCheck super.hw-kafka-client) {
+    src = pkgs.fetchFromGitHub {
+      owner = "haskell-works";
+      repo = "hw-kafka-client";
+      rev = "ee119487711b5b0682ec37f6321020cca667ea37";
+      sha256 = "1j1vajg00xlz3vgzmca252k21jyb0nb30qawsahqvw81zsjzchj8";
+    };
+    version = "2.5.0";
+  };
 
   # Depends on broken "lss" package.
   snaplet-lss = dontDistribute super.snaplet-lss;
