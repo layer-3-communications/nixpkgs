@@ -202,6 +202,8 @@ in {
 
   autograd = callPackage ../development/python-modules/autograd { };
 
+  autologging = callPackage ../development/python-modules/autologging { };
+
   automat = callPackage ../development/python-modules/automat { };
 
   awkward = callPackage ../development/python-modules/awkward { };
@@ -659,6 +661,8 @@ in {
   slackclient = callPackage ../development/python-modules/slackclient { };
 
   slicerator = callPackage ../development/python-modules/slicerator { };
+
+  snapcast = callPackage ../development/python-modules/snapcast { };
 
   spglib = callPackage ../development/python-modules/spglib { };
 
@@ -4462,6 +4466,8 @@ in {
       maintainers = with maintainers; [ ];
     };
   };
+
+  owslib = callPackage ../development/python-modules/owslib { };
 
   PyICU = buildPythonPackage rec {
     name = "PyICU-2.2";
