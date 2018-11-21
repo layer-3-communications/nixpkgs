@@ -73,6 +73,11 @@
     github = "acowley";
     name = "Anthony Cowley";
   };
+  adamt = {
+    email = "mail@adamtulinius.dk";
+    github = "adamtulinius";
+    name = "Adam Tulinius";
+  };
   adelbertc = {
     email = "adelbertc@gmail.com";
     github = "adelbertc";
@@ -215,6 +220,11 @@
     email = "alunduil@alunduil.com";
     github = "alunduil";
     name = "Alex Brandt";
+  };
+  amar1729 = {
+    email = "amar.paul16@gmail.com";
+    github = "amar1729";
+    name = "Amar Paul";
   };
   ambrop72 = {
     email = "ambrop7@gmail.com";
@@ -683,6 +693,11 @@
     github = "campadrenalin";
     name = "Philip Horger";
   };
+  candeira = {
+    email = "javier@candeira.com";
+    github = "candeira";
+    name = "Javier Candeira";
+  };
   canndrew = {
     email = "shum@canndrew.org";
     github = "canndrew";
@@ -756,6 +771,11 @@
     email = "yu@cheng.cat";
     github = "ChengCat";
     name = "Yucheng Zhang";
+  };
+  chessai = {
+    email = "chessai1996@gmail.com";
+    github = "chessai";
+    name = "Daniel Cartwright";
   };
   chiiruno = {
     email = "okinan@protonmail.com";
@@ -1527,6 +1547,11 @@
     github = "ftrvxmtrx";
     name = "Siarhei Zirukin";
   };
+  fuerbringer = {
+    email = "severin@fuerbringer.info";
+    github = "fuerbringer";
+    name = "Severin Fürbringer";
+  };
   funfunctor = {
     email = "eocallaghan@alterapraxis.com";
     name = "Edward O'Callaghan";
@@ -1535,6 +1560,11 @@
     email = "fuuzetsu@fuuzetsu.co.uk";
     github = "fuuzetsu";
     name = "Mateusz Kowalczyk";
+  };
+  fuwa = {
+    email = "echowss@gmail.com";
+    github = "fuwa0529";
+    name = "Haruka Akiyama";
   };
   fuzzy-id = {
     email = "hacking+nixos@babibo.de";
@@ -1753,6 +1783,11 @@
   hinton = {
     email = "t@larkery.com";
     name = "Tom Hinton";
+  };
+  hlolli = {
+    email = "hlolli@gmail.com";
+    github = "hlolli";
+    name = "Hlodver Sigurdsson";
   };
   hodapp = {
     email = "hodapp87@gmail.com";
@@ -2686,6 +2721,11 @@
     github = "melsigl";
     name = "Melanie B. Sigl";
   };
+  melkor333 = {
+    email = "samuel@ton-kunst.ch";
+    github = "melkor333";
+    name = "Samuel Ruprecht";
+  };
   metabar = {
     email = "softs@metabarcoding.org";
     name = "Celine Mercier";
@@ -2694,6 +2734,11 @@
     email = "mgdelacroix@gmail.com";
     github = "mgdelacroix";
     name = "Miguel de la Cruz";
+  };
+  mgregoire = {
+    email = "gregoire@martinache.net";
+    github = "M-Gregoire";
+    name = "Gregoire Martinache";
   };
   mgttlinger = {
     email = "megoettlinger@gmail.com";
@@ -3820,6 +3865,11 @@
     github = "scolobb";
     name = "Sergiu Ivanov";
   };
+  screendriver = {
+    email = "nix@echooff.de";
+    github = "screendriver";
+    name = "Christian Rackerseder";
+  };
   Scriptkiddi = {
     email = "nixos@scriptkiddi.de";
     github = "scriptkiddi";
@@ -4002,6 +4052,11 @@
     email = "spacefrogg-nixos@meterriblecrew.net";
     github = "spacefrogg";
     name = "Michael Raitza";
+  };
+  spacekookie = {
+    email = "kookie@spacekookie.de";
+    github = "spacekookie";
+    name = "Katharina Fey";
   };
   spencerjanssen = {
     email = "spencerjanssen@gmail.com";
@@ -4227,6 +4282,11 @@
     email = "milan.svoboda@centrum.cz";
     github = "tex";
     name = "Milan Svoboda";
+  };
+  tg-x = {
+    email = "*@tg-x.net";
+    github = "tg-x";
+    name = "TG ⊗ Θ";
   };
   thall = {
     email = "niclas.thall@gmail.com";
@@ -4792,6 +4852,11 @@
     email = "contact@unaizalakain.info";
     github = "umazalakain";
     name = "Unai Zalakain";
+  };
+  zaninime = {
+    email = "francesco@zanini.me";
+    github = "zaninime";
+    name = "Francesco Zanini";
   };
   zarelit = {
     email = "david@zarel.net";
