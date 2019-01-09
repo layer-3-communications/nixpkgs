@@ -391,6 +391,11 @@
     github = "asppsa";
     name = "Alastair Pharo";
   };
+  astro = {
+    email = "astro@spaceboyz.net";
+    github = "astro";
+    name = "Astro";
+  };
   astsmtl = {
     email = "astsmtl@yandex.ru";
     github = "astsmtl";
@@ -664,6 +669,11 @@
     github = "bstrik";
     name = "Berno Strik";
   };
+  buffet = {
+    email = "niclas@countingsort.com";
+    github = "buffet";
+    name = "Niclas Meyer";
+  };
   bugworm = {
     email = "bugworm@zoho.com";
     github = "bugworm";
@@ -921,11 +931,6 @@
     email = "couchemar@yandex.ru";
     github = "couchemar";
     name = "Andrey Pavlov";
-  };
-  countingsort = {
-    email = "niclas@countingsort.com";
-    github = "countingsort";
-    name = "Niclas Meyer";
   };
   cpages = {
     email = "page@ruiec.cat";
@@ -1745,6 +1750,11 @@
     github = "hamhut1066";
     name = "Hamish Hutchings";
   };
+  hansjoergschurr = {
+    email = "commits@schurr.at";
+    github = "hansjoergschurr";
+    name = "Hans-Jörg Schurr";
+  };
   haslersn = {
     email = "haslersn@fius.informatik.uni-stuttgart.de";
     github = "haslersn";
@@ -2293,11 +2303,20 @@
     github = "kirelagin";
     name = "Kirill Elagin";
   };
+  kisonecat = {
+    email = "kisonecat@gmail.com";
+    github = "kisonecat";
+    name = "Jim Fowler";
+  };
   kkallio = {
     email = "tierpluspluslists@gmail.com";
     name = "Karn Kallio";
   };
-
+  klntsky = {
+    email = "klntsky@gmail.com";
+    name = "Vladimir Kalnitsky";
+    github = "8084";
+  };
   kmeakin = {
     email = "karlwfmeakin@gmail.com";
     name = "Karl Meakin";
@@ -3906,6 +3925,10 @@
     github = "fkz";
     name = "Fabian Schmitthenner";
   };
+  schmittlauch = {
+    email = "t.schmittlauch+nixos@orlives.de";
+    github = "schmittlauch";
+  };
   schneefux = {
     email = "schneefux+nixos_pkg@schneefux.xyz";
     github = "schneefux";
@@ -4676,6 +4699,11 @@
     email = "vklquevs@gmail.com";
     github = "vklquevs";
     name = "vklquevs";
+  };
+  vlaci = {
+    email = "laszlo.vasko@outlook.com";
+    github = "vlaci";
+    name = "László Vaskó";
   };
   vlstill = {
     email = "xstill@fi.muni.cz";

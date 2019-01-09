@@ -270,6 +270,8 @@ in {
 
   blivet = callPackage ../development/python-modules/blivet { };
 
+  boltons = callPackage ../development/python-modules/boltons { };
+
   breathe = callPackage ../development/python-modules/breathe { };
 
   brotli = callPackage ../development/python-modules/brotli { };
@@ -352,6 +354,8 @@ in {
 
   eradicate = callPackage ../development/python-modules/eradicate {  };
 
+  face = callPackage ../development/python-modules/face { };
+
   fastpbkdf2 = callPackage ../development/python-modules/fastpbkdf2 {  };
 
   fido2 = callPackage ../development/python-modules/fido2 {  };
@@ -373,6 +377,8 @@ in {
   gin-config = callPackage ../development/python-modules/gin-config { };
 
   globus-sdk = callPackage ../development/python-modules/globus-sdk { };
+
+  glom = callPackage ../development/python-modules/glom { };
 
   goocalendar = callPackage ../development/python-modules/goocalendar { };
 
@@ -614,6 +620,13 @@ in {
   pyqt5 = pkgs.libsForQt5.callPackage ../development/python-modules/pyqt/5.x.nix {
     pythonPackages = self;
   };
+
+  /*
+    `pyqt5_with_qtwebkit` should not be used by python libraries in
+    pkgs/development/python-modules/*. Putting this attribute in
+    `propagatedBuildInputs` may cause collisions.
+  */
+  pyqt5_with_qtwebkit = self.pyqt5.override { withWebKit = true; };
 
   pysc2 = callPackage ../development/python-modules/pysc2 { };
 
@@ -1122,6 +1135,8 @@ in {
 
   blockdiag = callPackage ../development/python-modules/blockdiag { };
 
+  blockdiagcontrib-cisco = callPackage ../development/python-modules/blockdiagcontrib-cisco { };
+
   bpython = callPackage ../development/python-modules/bpython {};
 
   bsddb3 = callPackage ../development/python-modules/bsddb3 { };
@@ -1184,6 +1199,8 @@ in {
   cartopy = callPackage ../development/python-modules/cartopy {};
 
   case = callPackage ../development/python-modules/case {};
+
+  cbor = callPackage ../development/python-modules/cbor {};
 
   cassandra-driver = callPackage ../development/python-modules/cassandra-driver { };
 
@@ -1679,9 +1696,9 @@ in {
     then callPackage ../development/python-modules/faulthandler {}
     else throw "faulthandler is built into ${python.executable}";
 
-  flexmock = callPackage ../development/python-modules/flexmock { };
-
   fb-re2 = callPackage ../development/python-modules/fb-re2 { };
+
+  flexmock = callPackage ../development/python-modules/flexmock { };
 
   flit = callPackage ../development/python-modules/flit { };
 
@@ -1721,7 +1738,11 @@ in {
 
   gateone = callPackage ../development/python-modules/gateone { };
 
-  gcutil = callPackage ../development/python-modules/gcutil { };
+  # TODO: Remove after 19.03 is branched off:
+  gcutil = throw ''
+    pythonPackages.gcutil is deprecated and can be replaced with "gcloud
+    compute" from the package google-cloud-sdk.
+  '';
 
   GeoIP = callPackage ../development/python-modules/GeoIP { };
 
@@ -2087,6 +2108,8 @@ in {
 
   svg-path = callPackage ../development/python-modules/svg-path { };
 
+  r2pipe = callPackage ../development/python-modules/r2pipe { };
+
   regex = callPackage ../development/python-modules/regex { };
 
   ratelimiter = callPackage ../development/python-modules/ratelimiter { };
@@ -2284,6 +2307,8 @@ in {
 
   dtopt = callPackage ../development/python-modules/dtopt { };
 
+  easywatch = callPackage ../development/python-modules/easywatch { };
+
   ecdsa = callPackage ../development/python-modules/ecdsa { };
 
   effect = callPackage ../development/python-modules/effect {};
@@ -2415,6 +2440,10 @@ in {
   pytorch = callPackage ../development/python-modules/pytorch {
     cudaSupport = pkgs.config.cudaSupport or false;
   };
+
+  pyro-ppl = callPackage ../development/python-modules/pyro-ppl {};
+
+  opt-einsum = callPackage ../development/python-modules/opt-einsum {};
 
   pytorchWithCuda = self.pytorch.override {
     cudaSupport = true;
@@ -3078,7 +3107,9 @@ in {
 
   pyte = callPackage ../development/python-modules/pyte { };
 
-  graphviz = callPackage ../development/python-modules/graphviz { };
+  graphviz = callPackage ../development/python-modules/graphviz {
+    inherit (pkgs) graphviz;
+  };
 
   pygraphviz = callPackage ../development/python-modules/pygraphviz {
     graphviz = pkgs.graphviz; # not the python package
@@ -3214,7 +3245,9 @@ in {
 
   obfsproxy = callPackage ../development/python-modules/obfsproxy { };
 
-  objgraph = callPackage ../development/python-modules/objgraph { };
+  objgraph = callPackage ../development/python-modules/objgraph {
+    graphvizPkg = pkgs.graphviz;
+  };
 
   odo = callPackage ../development/python-modules/odo { };
 
@@ -3225,6 +3258,8 @@ in {
   opentimestamps = callPackage ../development/python-modules/opentimestamps { };
 
   ordereddict = callPackage ../development/python-modules/ordereddict { };
+
+  od = callPackage ../development/python-modules/od { };
 
   orderedset = callPackage ../development/python-modules/orderedset { };
 
@@ -3519,7 +3554,9 @@ in {
 
   pydispatcher = callPackage ../development/python-modules/pydispatcher { };
 
-  pydot = callPackage ../development/python-modules/pydot { };
+  pydot = callPackage ../development/python-modules/pydot {
+    inherit (pkgs) graphviz;
+  };
 
   pydot_ng = callPackage ../development/python-modules/pydot_ng { };
 
@@ -3983,6 +4020,8 @@ in {
 
   sqlalchemy_migrate = callPackage ../development/python-modules/sqlalchemy-migrate { };
 
+  staticjinja = callPackage ../development/python-modules/staticjinja { };
+
   statsmodels = callPackage ../development/python-modules/statsmodels { };
 
   structlog = callPackage ../development/python-modules/structlog { };
@@ -4059,6 +4098,8 @@ in {
   uritools = callPackage ../development/python-modules/uritools { };
 
   update_checker = callPackage ../development/python-modules/update_checker {};
+
+  update-copyright = callPackage ../development/python-modules/update-copyright {};
 
   uritemplate = callPackage ../development/python-modules/uritemplate { };
 
@@ -4381,6 +4422,8 @@ in {
   umalqurra = callPackage ../development/python-modules/umalqurra { };
 
   unicodecsv = callPackage ../development/python-modules/unicodecsv { };
+
+  unidiff = callPackage ../development/python-modules/unidiff { };
 
   unittest2 = callPackage ../development/python-modules/unittest2 { };
 
@@ -5090,6 +5133,8 @@ in {
 
   simpy = callPackage ../development/python-modules/simpy { };
 
+  x256 = callPackage ../development/python-modules/x256 { };
+
   yattag = callPackage ../development/python-modules/yattag { };
 
   z3 = (toPythonModule (pkgs.z3.override {
@@ -5119,6 +5164,18 @@ in {
   importlib-metadata = callPackage ../development/python-modules/importlib-metadata {};
 
   importlib-resources = callPackage ../development/python-modules/importlib-resources {};
+
+  srptools = callPackage ../development/python-modules/srptools { };
+
+  curve25519-donna = callPackage ../development/python-modules/curve25519-donna { };
+
+  pyatv = callPackage ../development/python-modules/pyatv { };
+
+  pybotvac = callPackage ../development/python-modules/pybotvac { };
+
+  pytado = callPackage ../development/python-modules/pytado { };
+
+  casttube = callPackage ../development/python-modules/casttube { };
 
 });
 
