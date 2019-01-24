@@ -109,7 +109,7 @@ in
   ipv6 = handleTest ./ipv6.nix {};
   jenkins = handleTest ./jenkins.nix {};
   #kafka = handleTest ./kafka.nix {}; # broken since openjdk: 8u181 -> 8u192
-  kerberos = handleTest tests/kerberos/default.nix {};
+  kerberos = handleTest ./kerberos/default.nix {};
   kernel-latest = handleTest ./kernel-latest.nix {};
   kernel-lts = handleTest ./kernel-lts.nix {};
   keymap = handleTest ./keymap.nix {};
@@ -200,6 +200,7 @@ in
   syncthing-relay = handleTest ./syncthing-relay.nix {};
   systemd = handleTest ./systemd.nix {};
   taskserver = handleTest ./taskserver.nix {};
+  telegraf = handleTest ./telegraf.nix {};
   tomcat = handleTest ./tomcat.nix {};
   tor = handleTest ./tor.nix {};
   transmission = handleTest ./transmission.nix {};
